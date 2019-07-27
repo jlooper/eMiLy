@@ -1,0 +1,80 @@
+.page {
+	background-color: #d2e7ff;
+	background: rgb(0, 65, 106);
+	background: linear-gradient(20deg, rgba(195, 235, 255, 1) 0%, rgba(0, 65, 106, 1) 100%);
+}
+.action-bar {
+	font-family: 'Josefin Slab';
+	color: white;
+	font-size: 25;
+	text-align: center;
+	margin: 5;
+}
+.card {
+	background-color: rgba(255, 254, 249, 1);
+	border-radius: 5;
+	margin: 10;
+	padding: 5;
+	text-align: center;
+}
+.mini-card {
+	border-radius: 5;
+	margin: 5;
+	text-align: center;
+}
+
+.inner-card {
+	border-radius: 5;
+	margin: 15;
+	padding: 15;
+	text-align: center;
+	background-color: #ffefd7;
+	font-family: 'Josefin Slab';
+	font-size: 20;
+}
+
+.indigo {
+	background-color: #00416a;
+	color: white;
+}
+.rose {
+	background-color: #ffc3c3;
+	color: #00416a;
+}
+.blue {
+	background-color: #1489d2;
+	color: #ffefd7;
+}
+.gold {
+	background-color: #ffefd7;
+	color: #00416a;
+}
+.title {
+	font-family: 'Josefin Sans';
+	font-size: 35;
+	color: #00416a;
+	padding: 5;
+	margin-top: 10;
+}
+.subtitle {
+	font-family: 'Josefin Sans';
+	font-size: 30;
+	color: #00416a;
+	padding: 5;
+	margin-bottom: 10;
+}
+.text {
+	font-family: 'Josefin Slab';
+	font-size: 25;
+	margin: 5px;
+}
+.nav-btn {
+	border-radius: 20;
+	padding: 10;
+	margin: 10;
+	background-color: #00416a;
+}
+
+.colored {
+	background-color: #1489d2;
+}
