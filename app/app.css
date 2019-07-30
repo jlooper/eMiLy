@@ -19,8 +19,13 @@
 }
 .mini-card {
 	border-radius: 5;
-	margin: 5;
+	margin: 15;
+	padding: 15;
 	text-align: center;
+	background-color: #ffefd7;
+	font-family: 'Josefin Slab';
+	font-size: 20;
+	height: 40;
 }
 
 .inner-card {
@@ -31,6 +36,7 @@
 	background-color: #ffefd7;
 	font-family: 'Josefin Slab';
 	font-size: 20;
+	min-height: 500px;
 }
 
 .indigo {
