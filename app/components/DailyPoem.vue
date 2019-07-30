@@ -1,7 +1,6 @@
 <template>
   <StackLayout>
     <Label class="action-bar" text="Discover Emily Dickinson"></Label>
-
     <ScrollView class="card">
       <StackLayout>
         <Label horizontalAlignment="center" textWrap="true" class="title">Welcome</Label>

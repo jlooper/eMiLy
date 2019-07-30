@@ -9,6 +9,7 @@ const state = {
     poem: null,
     newPoem: null,
     moodPoem: null,
+    selfiePoem: null,
 };
 
 const mutations = {
@@ -21,11 +22,17 @@ const mutations = {
     displayMoodPoem: (state, randomPoem) => {
         state.moodPoem = randomPoem;
     },
+    displaySelfiePoem: (state, randomPoem) => {
+        state.selfiePoem = randomPoem;
+    },
     clearPoem: state => {
         state.poem = '';
     },
     clearMoodPoem: state => {
         state.moodPoem = '';
+    },
+    clearSelfiePoem: state => {
+        state.selfiePoem = '';
     },
 };
 
@@ -49,11 +56,17 @@ const actions = {
             }
         }
     },
-    clearPoem({ commit }) {
-        commit('clearPoem');
-    },
-    clearMoodPoem({ commit }) {
-        commit('clearMoodPoem');
+    getSelfiePoem({ commit }, payload) {
+        for (var i = 0; i < poetry.length; i++) {
+            //todo, randomize this as there are many possible matches
+            if (poetry[i].sentiment.toFixed(1) == parseFloat(payload).toFixed(1)) {
+                console.log(poetry[i].sentiment, parseFloat(payload));
+                let parsedPoem = JSON.stringify(poetry[i].text);
+                let selectedPoem = parsedPoem.split(',').join('\n');
+                commit('displaySelfiePoem', selectedPoem);
+                break;
+            }
+        }
     },
     getNewPoem({ commit }) {
         let randomPoem = Math.floor(Math.random() * 10);
@@ -61,6 +74,15 @@ const actions = {
         let parsedPoem = JSON.stringify(poemObject.text);
         let selectedPoem = parsedPoem.split(',').join('\n');
         commit('displayNewPoem', selectedPoem);
+    },
+    clearPoem({ commit }) {
+        commit('clearPoem');
+    },
+    clearMoodPoem({ commit }) {
+        commit('clearMoodPoem');
+    },
+    clearSelfiePoem({ commit }) {
+        commit('clearSelfiePoem');
     },
 };
 

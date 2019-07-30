@@ -19,8 +19,8 @@
           :value="value"
           @valueChange="onValueChanged($event.value)"
         />
-        <Button @tap="selectPoem" text="Match My Mood" class="inner-card indigo" />
-        <StackLayout :class="moodClass">
+        <Button @tap="selectPoem" text="Match My Mood" class="mini-card indigo" />
+        <StackLayout v-if="showCard" :class="moodClass">
           <Label textWrap="true" :text="moodPoem" />
         </StackLayout>
       </StackLayout>
@@ -35,7 +35,8 @@ export default {
   data() {
     return {
       value: 0.5,
-      moodClass: "inner-card"
+      moodClass: "inner-card",
+      showCard: false
     };
   },
   computed: {
@@ -44,6 +45,7 @@ export default {
   methods: {
     ...mapActions(["getMoodPoem", "clearMoodPoem"]),
     onValueChanged(e) {
+      this.showCard = true;
       this.clearMoodPoem();
       this.value = e.toFixed(2);
       if (this.value < 0.5) {
