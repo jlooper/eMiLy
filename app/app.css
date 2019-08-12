@@ -1,6 +1,4 @@
 .page {
-	background-color: #d2e7ff;
-	background: rgb(0, 65, 106);
 	background: linear-gradient(20deg, rgba(195, 235, 255, 1) 0%, rgba(0, 65, 106, 1) 100%);
 }
 .action-bar {
@@ -50,10 +48,6 @@
 .blue {
 	background-color: #1489d2;
 	color: #ffefd7;
-}
-.gold {
-	background-color: #ffefd7;
-	color: #00416a;
 }
 .title {
 	font-family: 'Josefin Sans';
