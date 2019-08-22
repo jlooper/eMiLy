@@ -13,6 +13,9 @@
           <Image class="cameraPic rose" :src="selfie"></Image>
           <Label v-for="emotion in emotions" :key="emotion">{{ emotion }}</Label>
         </StackLayout>
+        <StackLayout v-if="!complete">
+          <ActivityIndicator row="1" #activityIndicator busy="true" width="30" height="30"></ActivityIndicator>
+        </StackLayout>
         <StackLayout class="inner-card" v-if="selfiePoem">
           <Label textWrap="true" :text="selfiePoem" />
         </StackLayout>
@@ -36,7 +39,8 @@ export default {
       selfie: "",
       result: [],
       emotions: [],
-      myEmotion: 0.5
+      myEmotion: 0.5,
+      complete: true
     };
   },
   computed: {
@@ -46,6 +50,7 @@ export default {
     ...mapActions(["getSelfiePoem", "clearSelfiePoem"]),
     async runFaceDetect() {
       this.clearSelfiePoem();
+      this.complete = false;
       const imageAsset = await takePicture({
         width: 300,
         height: 500,
@@ -112,6 +117,7 @@ export default {
           break;
       }
       this.getSelfiePoem(this.myEmotion);
+      this.complete = true;
     },
 
     sendRequest(file) {
@@ -136,16 +142,20 @@ export default {
         task.on("responded", e => {
           //clear the array
           this.emotions = [];
-          const data = JSON.parse(e.data);
-          const emotion = data[0].faceAttributes.emotion;
+          if (e.data !== null) {
+            const data = JSON.parse(e.data);
+            const emotion = data[0].faceAttributes.emotion;
 
-          for (var i in emotion) this.emotions.push(emotion[i] + " - " + i);
+            for (var i in emotion) this.emotions.push(emotion[i] + " - " + i);
 
-          this.emotions.sort(function(a, b) {
-            return parseFloat(b) - parseFloat(a);
-          });
-          //grab the top element and equate it to a poem score
-          this.determineScore(this.emotions[0]);
+            this.emotions.sort(function(a, b) {
+              return parseFloat(b) - parseFloat(a);
+            });
+            //grab the top element and equate it to a poem score
+            this.determineScore(this.emotions[0]);
+          } else {
+            alert("Sorry, there was a problem");
+          }
         });
       });
     }
