@@ -31,7 +31,7 @@
 
 [Microsoft Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/?WT.mc_id=halfstacknyc-github-jelooper) - lots of interesting pre-trained models to try
 
-[Presentation slides](https://slides.com/telerikdevrel/emily)
+[Presentation slides](https://microsoft-cloud-advocates.slides.com/jenlooper/emily)
 
 ## Usage
 
