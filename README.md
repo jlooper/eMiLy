@@ -21,21 +21,21 @@
 
 [The Poetry DB](http://poetrydb.org/index.html) - Lots of poetry here to mine
 
-[Azure Notebooks](https://notebooks.azure.com/jennifer-looper/?WT.mc_id=halfstacknyc-github-jelooper) to test the poetry generator and perform text-mining on Dickinson's poetry
+[Azure Notebooks](https://notebooks.azure.com/jennifer-looper/?WT.mc_id=webunleashed-github-jelooper) to test the poetry generator and perform text-mining on Dickinson's poetry
 
 [Text-Gen RNN](https://github.com/minimaxir/textgenrnn) - Train a neural network on texts to generate similar styles
 
-[Microsoft's Face API](https://docs.microsoft.com/en-us/azure/cognitive-services/face/?WT.mc_id=halfstacknyc-github-jelooper) - not creepy at all. Take a selfie, determine emotion, and other uses
+[Microsoft's Face API](https://docs.microsoft.com/en-us/azure/cognitive-services/face/?WT.mc_id=webunleashed-github-jelooper) - not creepy at all. Take a selfie, determine emotion, and other uses
 
-[Microsoft Text Sentiment](https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/?WT.mc_id=halfstacknyc-github-jelooper) - input some text, output the sentiment. Useful for bots
+[Microsoft Text Sentiment](https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/?WT.mc_id=webunleashed-github-jelooper) - input some text, output the sentiment. Useful for bots
 
-[Microsoft Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/?WT.mc_id=halfstacknyc-github-jelooper) - lots of interesting pre-trained models to try
+[Microsoft Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/?WT.mc_id=webunleashed-github-jelooper) - lots of interesting pre-trained models to try
 
 [Presentation slides](https://microsoft-cloud-advocates.slides.com/jenlooper/emily)
 
 ## Usage
 
-Make sure you have [NativeScript](https://docs.nativescript.org/angular/start/quick-setup) installed. Clone this app and run `npm i`, then `tns run ios` or `tns run android` to run the app on simulators. You will need a key from Microsoft Cognitive Services; try it free here: https://azure.microsoft.com/en-us/services/cognitive-services/.
+Make sure you have [NativeScript](https://docs.nativescript.org/angular/start/quick-setup) installed. Clone this app and run `npm i`, then `tns run ios` or `tns run android` to run the app on simulators. You will need a key from Microsoft Cognitive Services; try it free [here](https://azure.microsoft.com/en-us/services/cognitive-services/?WT.mc_id=webunleashed-github-jelooper).
 
 This app is buit using [NativeScript-Vue](http://www.nativescript-vue.org).
 
